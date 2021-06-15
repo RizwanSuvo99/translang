@@ -1,0 +1,140 @@
+/* Default CSS */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Avenir-Regular";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/* Hero Section CSS Start */
+
+.section-header {
+  background-image: url("../images/hero-background.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0rem 16rem;
+}
+
+.hero {
+  height: 90rem;
+}
+
+.hero-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5.5rem 0rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+}
+
+.hero-navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.hero-navbar-logo-img {
+  margin-right: 4.5rem;
+}
+
+.hero-navbar-logo-icon {
+  margin-right: 1.5rem;
+}
+
+.hero-navbar-logo-text {
+  color: #5b6199;
+}
+
+.hero-navbar-list-item {
+  display: inline-block;
+  color: #fff;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 999;
+}
+.hero-navbar-list-item:hover:not(:last-child):after {
+  content: "";
+  height: 0.8rem;
+  width: 100%;
+  background-color: #fb6154;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+.hero-navbar-list-item:not(:last-child) {
+  margin-right: 5rem;
+}
+
+.hero-navbar-list-item:not(:last-child):hover {
+  transform: scale(1.2);
+  transition: all 0.2s ease;
+}
+
+.btn {
+  padding: 2rem 3rem;
+  border-radius: 3.2rem;
+  background-image: linear-gradient(
+    0deg,
+    rgb(251, 81, 94) 0%,
+    rgb(251, 105, 79) 100%
+  );
+  text-transform: uppercase;
+  font-family: "Muli-Extra-Bold";
+  line-height: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  display: inline-block;
+}
+
+.hero-body {
+  width: 41rem;
+  margin-top: 22.5rem;
+}
+
+.hero-body > *:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.hero-body-heading {
+  font-size: 5rem;
+  line-height: 6.5rem;
+  color: #161e6d;
+  text-transform: capitalize;
+}
+
+.hero-body-text{
+    font-size: 1.7rem;
+    line-height: 3.3rem;
+    color: #52585B;
+}
+
+
