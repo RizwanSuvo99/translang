@@ -8,12 +8,17 @@
   box-sizing: border-box;
 }
 
+/* * {
+  border: 1px solid red;
+} */
+
 ::selection {
   background-color: #fb6154;
 }
 
 html {
   font-size: 10px;
+  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -21,7 +26,6 @@ body {
   max-width: 1680px;
   min-height: 100vh;
   margin: 0 auto;
-  box-shadow: 0px 0px 10px 0px rgba(251, 105, 79, 0.5);
 }
 
 a {
@@ -31,6 +35,11 @@ a {
 
 ul li {
   list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* 
@@ -152,7 +161,7 @@ ul li {
 
 /* Features Section CSS Start */
 
-.features-heading {
+.section-heading {
   font-size: 2.5rem;
   line-height: 3.5rem;
   color: #161e6d;
@@ -161,14 +170,14 @@ ul li {
   margin-bottom: 5rem;
 }
 
+/* Features Box CSS */
 .features-items {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
-/* Features Box CSS */
+
 .features-items-box {
-  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,40 +187,119 @@ ul li {
   background-repeat: no-repeat;
   position: relative;
   padding: 8rem 4.5rem;
-  height: 49rem;
-  width: 38.5rem;
+  width: 30rem;
+  margin-bottom: 5rem;
 }
-.features-items-box::before{
-    content: "";
-    background-image: url("../images/shadow.png");
-    position: absolute;
-    height: 110%;
-    width: 110%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+.features-items-box::before {
+  content: "";
+  background-image: url("../images/shadow.png");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.3);
+  opacity: 0.3;
 }
+
+.features-items-box:hover {
+  background: url("../images/circle-bg.png"),
+    linear-gradient(137deg, rgba(45, 201, 239, 1) 0%, rgba(91, 59, 255, 1) 100%);
+  background-size: auto, 150%;
+  background-repeat: no-repeat;
+  background-position: 20% 100%, 0% 0%;
+}
+
 .features-items-box-icon {
   margin-bottom: 2rem;
+  width: 8.4rem;
 }
 .features-items-box-heading {
   font-size: 2rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
   color: #161e6d;
   text-transform: capitalize;
   text-align: center;
   font-family: "Avenir-Heavy";
   margin-bottom: 1rem;
+  position: relative;
 }
+
+.section-heading::before {
+  content: "";
+  height: 0.5rem;
+  width: 5rem;
+  background-color: #fb6154;
+  position: absolute;
+  margin-top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 32px;
+}
+
 .features-items-box-text {
   font-size: 1.2rem;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
   color: #52585b;
   text-transform: capitalize;
   text-align: center;
   font-family: "Avenir-Regular";
 }
 
+.features-items-box:hover .features-items-box-heading,
+.features-items-box:hover .features-items-box-text {
+  color: #fff;
+}
+
 /* Features Section CSS End */
+
+/* Fun Fact css start */
+.section-fun-fact{
+  background-image: url("../images/fun-fact-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain ;
+  
+}
+
+
+.section-heading-fun::before {
+  width: 0;
+}
+
+.section-subheading {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: #52585b;
+  text-transform: capitalize;
+  text-align: center;
+  font-family: "Avenir-Regular";
+  margin-bottom: 5rem;
+}
+
+.fun-fact-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.fun-fact-box-item {
+  text-align: center;
+  margin: 2.5rem;
+}
+.fun-fact-box-item-number {
+  font-family: "Avenir-Heavy";
+  color: #161e6d;
+  font-size: 3rem;
+}
+
+.fun-fact-box-item-title{
+  color: #52585b;
+  font-family: "Avenir-Regular";
+  font-size: 2rem;
+  text-transform: capitalize;
+}
